@@ -12,7 +12,7 @@ I studied CS and marketing at the [University of New Orleans](https://www.uno.ed
 
 - You can find my blog posts [here](/blog/).
 - Some links I like [here](/links/).
-- You can find my CV [here](/assets/cv.pdf) 
+- You can find my CV [here](/_assets/cv.pdf) 
 
 ## What I like
 
