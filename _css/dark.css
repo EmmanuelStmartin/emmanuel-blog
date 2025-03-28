@@ -1,29 +1,33 @@
-:root[data-theme="dark"] {
-  --bg-color: #1a1a1a; /* Deep charcoal */
-  --text-color: #e6e1d7; /* Warm off-white */
+/* Replace ALL existing code in dark.css with this: */
+
+/* Dark theme */
+body.dark-theme {
+  --background: #1a1a1a;       /* Changed from --bg-color */
+  --text-color: #e6e1d7;
   --link-color: var(--text-color);
-  --link-hover-color: #b4a8d1; /* Soft lavender */
+  --link-hover-color: #b4a8d1;
   --heading-color: var(--text-color);
-  --code-bg: #252525; /* Slightly lighter than background */
+  --code-bg: #252525;
   --code-color: #e6e1d7;
-  --blockquote-color: #a39e95; /* Muted warm gray */
+  --blockquote-color: #a39e95;
   --date-color: #a39e95;
 }
 
-:root[data-theme="light"] {
-  --bg-color: #ffffff; 
-  --text-color: #2a2a2a; /* Soft black */
+/* Light theme */
+body:not(.dark-theme) {
+  --background: #ffffff;
+  --text-color: #2a2a2a;
   --link-color: var(--text-color);
-  --link-hover-color: #23a64d; /* Deeper sage green for better contrast */
-  --heading-color: var(--text-color);
-  --code-bg: #f2f0eb; /* Slightly darker than background */
+  --link-hover-color: #23a64d;
+  --code-bg: #f2f0eb;
   --code-color: #2a2a2a;
   --blockquote-color: #666666;
   --date-color: #666666;
 }
 
+/* Base styles */
 body {
-  background-color: var(--bg-color);
+  background-color: var(--background); /* Updated from --bg-color */
   color: var(--text-color);
 }
 
