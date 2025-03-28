@@ -2,11 +2,12 @@
 
 # About me
 
-Hi, I'm Emmanuel.
+Howdy, I'm Emmanuel.
 
-I'm an engineer, AI person, statistician, economist, and moto enthusiast. I love to [code](https://www.github.com/EmmanuelStmartin) and climb absurdley large rocks. As programmer, I spend most of my time writing peices of text which solve problems. Although the problems are often caused by other pices of text, which were often also written by me.
+I'm an engineer, AI person, statistician, economist, and moto enthusiast. I love to [code](https://www.github.com/EmmanuelStmartin) and climb absurdley large rocks. I dont know much about alot (but im working on it).
 
-I studied CS and marketing at the [University of New Orleans](https://www.uno.edu/academics/cos/computer-science). I specialize in high-level RL software for robots. I was an ML architect at [Steal Details Inc](https://www.linkedin.com/company/steel-details-inc./) and sometimes design projects that can be found in my [blog](/blog/).
+
+I studied CS and marketing at the [University of New Orleans](https://www.uno.edu/academics/cos/computer-science). I specialize in high-level RL software for robots. As programmer, I spend most of my time writing peices of text which solve problems. Although the problems are often caused by other pices of text, which were often also written by me.
 
 ## What's on this site
 
