@@ -1,34 +1,33 @@
-/* Replace ALL existing code in dark.css with this: */
-
-/* Dark theme */
-body.dark-theme {
-  --background: #1a1a1a;       /* Changed from --bg-color */
-  --text-color: #e6e1d7;
+/* ==== Dark/Light Theme Switch ==== */
+:root[data-theme="dark"] {
+  --bg-color: #1a1a1a;       /* Deep charcoal */
+  --text-color: #e6e1d7;     /* Warm off-white */
   --link-color: var(--text-color);
-  --link-hover-color: #b4a8d1;
+  --link-hover-color: #b4a8d1; /* Soft lavender */
   --heading-color: var(--text-color);
-  --code-bg: #252525;
+  --code-bg: #252525;        /* Slightly lighter than background */
   --code-color: #e6e1d7;
-  --blockquote-color: #a39e95;
+  --blockquote-color: #a39e95; /* Muted warm gray */
   --date-color: #a39e95;
 }
 
-/* Light theme */
-body:not(.dark-theme) {
-  --background: #ffffff;
-  --text-color: #2a2a2a;
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #2a2a2a;     /* Soft black */
   --link-color: var(--text-color);
-  --link-hover-color: #23a64d;
-  --code-bg: #f2f0eb;
+  --link-hover-color: #23a64d; /* Deeper sage green */
+  --heading-color: var(--text-color);
+  --code-bg: #f2f0eb;        /* Off-white code blocks */
   --code-color: #2a2a2a;
   --blockquote-color: #666666;
   --date-color: #666666;
 }
 
-/* Base styles */
+/* ==== Base Styles ==== */
 body {
-  background-color: var(--background); /* Updated from --bg-color */
+  background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 a {
@@ -39,25 +38,25 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
 }
 
-pre,
-code {
+pre, code {
   background-color: var(--code-bg);
   color: var(--code-color);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
 }
 
 blockquote {
   color: var(--blockquote-color);
+  border-left: 3px solid var(--blockquote-color);
+  margin-left: 0;
+  padding-left: 1em;
 }
 
 .date {
   color: var(--date-color);
+  font-size: 0.9em;
 }

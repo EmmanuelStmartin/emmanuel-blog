@@ -2,7 +2,7 @@
 
 # About me
 
-Howdy, I'm Emmanuel.
+Howdy, I'm Emmanuel Stmartin.
 
 I'm an engineer, AI person, statistician, economist, and moto enthusiast. I love to [code](https://www.github.com/EmmanuelStmartin) and climb absurdley large rocks. I dont know much about alot (but im working on it).
 
