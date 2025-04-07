@@ -39,23 +39,4 @@
   </atom:author>
         
 </item>
-
-<item>
-  <title>
-    <![CDATA[  about  ]]>
-  </title>
-  <link> https://emannuelstmartin.com/about/index.html </link>
-  <guid> https://emannuelstmartin.com/about/index.html </guid>
-  <description>
-    <![CDATA[  About me, Emmanuel Stmartin.  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Emmanuel Stmartin</atom:name>
-  </atom:author>
-        
-</item>
 </channel></rss>
