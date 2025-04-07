@@ -1,62 +1,51 @@
-/* ==== Dark/Light Theme Switch ==== */
+/* Define dark theme variables when html[data-theme="dark"] */
 :root[data-theme="dark"] {
-  --bg-color: #1a1a1a;       /* Deep charcoal */
-  --text-color: #e6e1d7;     /* Warm off-white */
-  --link-color: var(--text-color);
-  --link-hover-color: #b4a8d1; /* Soft lavender */
-  --heading-color: var(--text-color);
-  --code-bg: #252525;        /* Slightly lighter than background */
-  --code-color: #e6e1d7;
-  --blockquote-color: #a39e95; /* Muted warm gray */
-  --date-color: #a39e95;
+  --primary-color:        #4286f4; /* Example: A slightly different blue */
+  --secondary-color:      #aaa;    /* Lighter grey for secondary text */
+  --text-color:           #eee;    /* Light text for dark background */
+  --bg-color:             #1e1e1e; /* Dark background */
+  --bg-color-secondary:   #2a2a2a; /* Slightly lighter dark for secondary backgrounds */
+  --border-color:         #444;    /* Darker border */
+  --code-text-color:      #ddd;    /* Light code text */
+  --code-bg-color:        #2f2f2f; /* Dark code background */
+  --link-color:           #66aaff; /* Brighter blue for links */
+  --link-hover-color:     #88ccff; /* Even brighter blue for link hover */
+  --blockquote-text:      #bbb;    /* Slightly muted blockquote text */
+  --blockquote-bg:        #282828; /* Darker blockquote background */
+  --table-border-color:   #555;    /* Dark table borders */
+  --table-header-bg:      #333;    /* Dark table header */
+  --table-cell-bg:        #2a2a2a; /* Dark table cell */
+  --table-cell-hover-bg:  #383838; /* Slightly lighter dark on hover */
+
+  /* Ensure images don't become too bright in dark mode */
+  img {
+    filter: brightness(.8) contrast(1.2);
+  }
+
+  /* Specific overrides for highlight.js theme if needed */
+  /* Example: Adjusting background for a specific theme like 'github-dark' */
+  .hljs {
+    background: var(--code-bg-color) !important; /* Override highlight.js background */
+    color: var(--code-text-color) !important;
+  }
 }
 
-:root[data-theme="light"] {
-  --bg-color: #ffffff;
-  --text-color: #2a2a2a;     /* Soft black */
-  --link-color: var(--text-color);
-  --link-hover-color: #23a64d; /* Deeper sage green */
-  --heading-color: var(--text-color);
-  --code-bg: #f2f0eb;        /* Off-white code blocks */
-  --code-color: #2a2a2a;
-  --blockquote-color: #666666;
-  --date-color: #666666;
+/* Styles that apply ONLY in dark mode (not using variables) */
+[data-theme="dark"] body {
+  /* You could add specific non-variable overrides here if necessary */
+  /* Example: border-image, specific filter effects, etc. */
 }
 
-/* ==== Base Styles ==== */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+/* Styles for code blocks in dark mode using variables */
+[data-theme="dark"] code,
+[data-theme="dark"] pre {
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
+  /* Padding/border-radius are likely set in franklin.css, no need to repeat */
+  /* border: 1px solid var(--border-color); */ /* Optional border */
 }
 
-a {
-  color: var(--link-color);
-}
-
-a:hover {
-  color: var(--link-hover-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
-}
-
-pre, code {
-  background-color: var(--code-bg);
-  color: var(--code-color);
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-}
-
-blockquote {
-  color: var(--blockquote-color);
-  border-left: 3px solid var(--blockquote-color);
-  margin-left: 0;
-  padding-left: 1em;
-}
-
-.date {
-  color: var(--date-color);
-  font-size: 0.9em;
+/* Ensure visited links are still distinct in dark mode */
+[data-theme="dark"] a:visited {
+    color: #9a9aff; /* Example: A purple-ish blue for visited links */
 }

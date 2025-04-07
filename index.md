@@ -1,35 +1,42 @@
-@def title = "About"
+@def title = "Emmanuel St-Martin"
+@def author = "Emmanuel St-Martin"
+@def description = "Personal website of Emmanuel St-Martin, PhD student in Computer Science at Mila and Université de Montréal."
+@def date = Date(2025, 3, 27)
+@def tags = ["introduction", "homepage"]
 
-# About me
+# Emmanuel St-Martin
 
-Howdy, I'm Emmanuel Stmartin.
+Welcome to my personal website. I am a PhD student in Computer Science at Mila and Université de Montréal, supervised by [Professor Glen Berseth](https://www.glenberseth.com/). My research interests lie at the intersection of Deep Learning, Reinforcement Learning, Robotics and Computer Vision.
 
-I'm an engineer, AI person, statistician, economist, and moto enthusiast. I love to [code](https://www.github.com/EmmanuelStmartin) and climb absurdley large rocks. I dont know much about alot (but im working on it).
+I am passionate about building intelligent systems that can perceive, reason, and act in the physical world. My current work focuses on developing novel algorithms for robot learning, particularly in the areas of sample efficiency and generalization.
 
+---
 
-I studied CS and marketing at the [University of New Orleans](https://www.uno.edu/academics/cos/computer-science). I specialize in high-level RL software for robots. As programmer, I spend most of my time writing peices of text which solve problems. Although the problems are often caused by other pices of text, which were often also written by me.
+### About Me
 
-## What's on this site
+I believe that the most exciting frontiers in AI involve creating agents that can interact robustly and adaptively with complex, unstructured environments. This requires tackling fundamental challenges in perception, control, and learning.
 
-- You can find my blog posts [here](/blog/).
-- Some links I like [here](/links/).
-- You can find my CV [here](/_assets/cv.pdf) 
+Before starting my PhD, I completed my Master's degree, also at Mila, where I worked on [Your Master's Thesis Topic/Area]. I also have experience working as a [Your Previous Role/Industry Experience, if any].
 
-## What I like
+You can find more details about my background and publications in my [CV](/assets/cv.pdf). ---
 
-I tend to focus on computational topics in lots of domains, though generally I am an economist. I am currently interested in:
+### Research Interests
 
-* Generative AI and NLP
-* AI systems
-* ATProtocol
-* Neural network architectures
-* Type systems and compilers
-* Building multi-agent systems
-* Asset pricing
+* **Reinforcement Learning:** Model-based RL, offline RL, hierarchical RL, exploration.
+* **Robotics:** Robot manipulation, sim-to-real transfer, tactile sensing.
+* **Computer Vision:** Object recognition, scene understanding, representation learning.
+* **Deep Learning:** Generative models, transformers, self-supervised learning.
 
-Favorite programming languages:
+---
 
-* [Julia](https://julialang.org/) because it's fast and fun to write.
-* [Rust](https://www.rust-lang.org/en-US/) because I think its cool.
-* [R](https://www.r-project.org/) for the love of the game.
-* [Mathematica](https://www.wolfram.com/mathematica/) because I forget how to take derivatives.
+### Recent Updates
+
+* **[Date]**: [Brief update, e.g., Paper accepted at Conference XYZ, Started new project on...]
+* **[Date]**: Check out my latest blog post on [Blog Post Topic]!
+
+---
+
+Feel free to explore the [Blog](/blog/) section for my thoughts on various topics, or the [Links](/links/) page for resources I find useful.
+
+*Typos corrected: absurdly, a lot, pieces.*
+*Added more placeholder structure.*

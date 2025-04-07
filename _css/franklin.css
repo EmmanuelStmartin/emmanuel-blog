@@ -1,315 +1,246 @@
-/* ==================================================================
-    DEFAULT FONT AND LAYOUT
-================================================================== */
+/* Reset and base styles (keep normalize.css or your preferred reset) */
+@import url("normalize.css");
+@import url("hypertext.css"); /* Assuming hypertext provides base styles */
 
-@import "dark.css";
+/* Define light theme variables (default) */
+:root {
+  --primary-color:        #3498db; /* Standard blue */
+  --secondary-color:      #555;    /* Dark grey for secondary text */
+  --text-color:           #333;    /* Default text color */
+  --bg-color:             #ffffff; /* White background */
+  --bg-color-secondary:   #f9f9f9; /* Very light grey for secondary backgrounds */
+  --border-color:         #ddd;    /* Light border */
+  --code-text-color:      #333;    /* Dark code text */
+  --code-bg-color:        #f5f5f5; /* Light grey code background */
+  --link-color:           #007bff; /* Standard link blue */
+  --link-hover-color:     #0056b3; /* Darker blue for link hover */
+  --blockquote-text:      #555;    /* Blockquote text */
+  --blockquote-bg:        #f9f9f9; /* Blockquote background */
+  --table-border-color:   #eee;    /* Light table borders */
+  --table-header-bg:      #f2f2f2; /* Light table header */
+  --table-cell-bg:        #fff;    /* White table cell */
+  --table-cell-hover-bg:  #f5f5f5; /* Slightly grey on hover */
+}
 
-html {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 17px;
+/* Apply base variables */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
   color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transition */
+  margin: 0;
+  padding: 0;
 }
 
-/* ==================================================================
-  BASIC GRID FOR PROFILE PIC
-================================================================== */
-
-.franklin-content .row {
-  display: block;
+/* Layout containers */
+.franklin-container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
-.franklin-content .left {
-  float: left;
-  margin-right: 15px;
+.franklin-content {
+  margin-top: 20px;
 }
 
-.franklin-content .right {
-  float: right;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color); /* Use variable */
 }
 
-.franklin-content .container img {
-  width: auto;
-  padding-left: 0;
-  border-radius: 10px;
-}
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.85em; }
 
-.franklin-content .footnote {
-  position: relative;
-  top: -0.5em;
-  font-size: 70%;
-}
-
-/* ==================================================================
-  FOOT / COPYRIGHT
-================================================================== */
-
-.franklin-content .page-foot a {
+/* Consolidated Heading Link Styles */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
-  color: var(--blockquote-color);
+  color: inherit; /* Inherit heading color */
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   text-decoration: underline;
 }
 
-.page-foot {
-  font-size: 80%;
-  font-family: Arial, serif;
-  color: var(--blockquote-color);
-  text-align: center;
-  margin-top: 6em;
-  border-top: 1px solid
-    color-mix(in srgb, var(--blockquote-color) 15%, transparent);
-  padding-top: 2em;
-  margin-bottom: 4em;
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
 }
 
-/* ==================================================================
-  TEXT GEOMETRY
-================================================================== */
-
-.franklin-content {
-  position: relative;
-  padding-left: 12.5%;
-  padding-right: 12.5%;
-  line-height: 1.35em;
-}
-
-/* on wide screens, fix content width to a max value */
-@media (min-width: 940px) {
-  .franklin-content {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* on narrow device, reduce margins */
-@media (max-width: 480px) {
-  .franklin-content {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-}
-
-/* ==================================================================
-  TITLES
-================================================================== */
-
-.franklin-content h1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 24px;
-}
-.franklin-content h2 {
-  font-size: 22px;
-}
-.franklin-content h3 {
-  font-size: 20px;
-}
-
-.franklin-content h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-align: left;
-}
-
-.franklin-content h1 a {
-  color: inherit;
+/* Links */
+a {
+  color: var(--link-color);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
-.franklin-content h2 a {
-  color: inherit;
-  text-decoration: none;
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
-.franklin-content h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-.franklin-content h4 a {
-  color: inherit;
-  text-decoration: none;
-}
-.franklin-content h5 a {
-  color: inherit;
-  text-decoration: none;
-}
-.franklin-content h6 a {
-  color: inherit;
-  text-decoration: none;
+a:visited {
+    /* Define a visited color if desired, ensure it works with dark mode */
+    color: #0056b3; /* Example visited color for light mode */
 }
 
-.franklin-content table {
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-  text-align: center;
-}
-.franklin-content tr,
-th {
-  padding: 10px;
-  border: 1px solid black;
-}
-.franklin-content td {
-  padding: 10px;
-  border: 1px solid black;
+
+/* Code blocks */
+code, pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
+  border-radius: 4px;
+  padding: 0.2em 0.4em; /* Padding for inline code */
 }
 
-.franklin-content blockquote {
-  border-left: 7px solid #a8a8a8;
-  margin: 0em 0px;
-  padding: 0.5em 10px;
+pre {
+  padding: 1em; /* More padding for block code */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  margin-bottom: 1em;
+  /* border: 1px solid var(--border-color); */ /* Optional border */
 }
 
-.franklin-content blockquote p {
-  display: inline;
+pre code {
+  padding: 0; /* Remove extra padding inside pre */
+  background-color: transparent; /* Inherit pre background */
+  border-radius: 0;
 }
 
-/* ==================================================================
-  GENERAL FORMATTING
-================================================================== */
+/* Blockquotes */
+blockquote {
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  border-left: 4px solid var(--border-color);
+  background-color: var(--blockquote-bg);
+  color: var(--blockquote-text);
+}
+blockquote p {
+  margin-bottom: 0; /* Remove bottom margin for paragraphs inside blockquote */
+}
 
+/* Lists */
+ul, ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
 li {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-ul,
-ol {
-  margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-/* ==================================================================
-  HYPERREFS AND FOOTNOTES
-================================================================== */
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  border: 1px solid var(--table-border-color);
+}
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid var(--table-border-color);
+}
+thead th {
+  background-color: var(--table-header-bg);
+  font-weight: 600;
+}
+tbody tr:nth-child(odd) td {
+  /* background-color: var(--table-cell-bg); */ /* Optional striping */
+}
+tbody tr:hover td {
+  background-color: var(--table-cell-hover-bg);
+}
 
-a {
+/* Horizontal Rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2em 0;
+}
+
+/* Footer styles (from hypertext.css or customize here) */
+.franklin-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  text-align: center;
+}
+.page-foot {
+  /* Styles for the content inside the footer */
+}
+.copyright {
+  margin-bottom: 5px;
+}
+.page-foot-links a {
+  margin: 0 5px;
+  color: var(--secondary-color);
+}
+.page-foot-links a:hover {
   color: var(--link-color);
-  text-decoration: underline;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 0.2em;
 }
 
-a:hover {
-  text-decoration: wavy underline;
-  text-underline-offset: 0.2em;
+/* Header styles (from hypertext.css or customize here) */
+.franklin-header {
+  padding: 10px 0;
+  position: relative; /* Needed for absolute positioning of theme toggle */
 }
-
-.franklin-content .eqref a {
-  color: green;
+.franklin-header-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
 }
-.franklin-content .bibref a {
-  color: green;
+.franklin-header-logo a {
+  text-decoration: none;
+  color: inherit;
 }
-
-.franklin-content sup {
-  font-size: 70%;
-  vertical-align: super;
-  line-height: 0;
-}
-
-.franklin-content table.fndef {
-  margin: 0;
+.franklin-header-nav {
+  text-align: center;
   margin-bottom: 10px;
 }
-.franklin-content .fndef tr,
-td {
+.franklin-header-nav ul {
+  list-style: none;
   padding: 0;
-  border: 0;
-  text-align: left;
+  margin: 0;
 }
-.franklin-content .fndef td.fndef-backref {
-  vertical-align: top;
-  font-size: 70%;
-  padding-left: 5px;
+.franklin-header-nav li {
+  display: inline-block;
+  margin: 0 10px;
 }
-.franklin-content .fndef td.fndef-content {
-  font-size: 80%;
-  padding-left: 10px;
+.franklin-header-nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
 }
-
-/* ==================================================================
-  IMAGES in CONTENT
-================================================================== */
-
-.franklin-content img {
-  width: 70%;
-  text-align: center;
-  padding-left: 10%;
+.franklin-header-nav a:hover,
+.franklin-header-nav a.active { /* Style for active page link */
+  color: var(--link-color);
+}
+.franklin-header-line {
+  height: 1px;
+  background-color: var(--border-color);
+  margin-top: 10px;
 }
 
-.franklin-content .img-small img {
-  width: 50%;
-  text-align: center;
-  padding-left: 20%;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .franklin-container {
+    padding: 0 10px;
+  }
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.6em; }
+  /* Add other responsive styles as needed */
 }
 
-/* ==================================================================
-  KATEX
-================================================================== */
-
-body {
-  counter-reset: eqnum;
-}
-
-.katex {
-  font-size: 1em !important;
-}
-
-.katex-display {
-  position: relative;
-  counter-increment: eqnum;
-}
-
-.katex-display::after {
-  content: "(" counter(eqnum) ")";
-  position: absolute;
-  display: block;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-}
-
-/* ==================================================================
-  CODE & HIGHLIGHT.JS (FIXED)
-================================================================== */
-
-code {
-  background-color: var(--code-bg); /* CHANGED TO VARIABLE */
-  color: var(--code-color);         /* ADDED COLOR VARIABLE */
-  padding: 0.1em 0.2em;
-  border-radius: 2px;
-  font-size: 90%;
-}
-
-.hljs {
-  font-size: 90%;
-  line-height: 1.35em;
-  border-radius: 10px;
-}
-
-.hljs-meta,
-.hljs-metas,
-.hljs-metap {
-  font-weight: bold;
-}
-
-/* ==================================================================
-  BOXES
-================================================================== */
-
-.franklin-content .colbox-blue {
-  background-color: #eef3f5;
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 5px;
-  margin-left: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 0 10px 10px 0;
-  border-left: 5px solid #4c9cf1;
-}
-
-/* REMOVED DUPLICATE #theme-toggle STYLES */
+/* Add other custom styles below */

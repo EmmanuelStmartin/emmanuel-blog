@@ -1,74 +1,48 @@
-+++
-title= "Links"
-date= "2018-06-20T06:56:21-07:00"
-author= "Emmanuel StMartin"
-categories= []
-tags=["links"]
-draft= false
-+++
+@def title = "Links"
+@def author = "Emmanuel St-Martin"
+@def date = Date(2025, 3, 27)
+@def tags = ["links", "resources"]
 
-Miscellaneous links I think are good.
+# Links
 
-## Economics
+Here are some links to resources, tools, and people I find interesting or useful.
 
-### Industrial organization
-* Ken Train's [Discrete Choice book](https://eml.berkeley.edu/books/choice2.html)
-* Chris Conlon's [industrial organization notes](https://chrisconlon.github.io/gradio.html)
+## Machine Learning & AI
 
-### Finance
-* [Asset Pricing](https://www.johnhcochrane.com/research-all/asset-pricing) by John Cochrane
+* **[Mila - Quebec AI Institute](https://mila.quebec/en/)**: My research home.
+* **[arXiv Sanity Preserver](http://www.arxiv-sanity.com/)**: Great tool by Andrej Karpathy for navigating recent ML papers.
+* **[Distill.pub](https://distill.pub/)**: High-quality, interactive articles explaining ML concepts.
+* **[Papers With Code](https://paperswithcode.com/)**: Find papers and their corresponding code implementations.
+* **[Spinning Up in Deep RL (OpenAI)](https://spinningup.openai.com/en/latest/)**: Excellent resource for learning about Deep Reinforcement Learning.
 
-## Books
+## Robotics
 
-### Data Science & Econometrics
-* [Forecasting: Principles and Practice](https://otexts.org/fpp2/)
-* [Econometrics with R](https://www.econometrics-with-r.org/)
-* [R for Data Science](http://r4ds.had.co.nz/)
+* **[Robotics Stack Exchange](https://robotics.stackexchange.com/)**: Q&A site for robotics.
+* **[The Robot Report](https://www.therobotreport.com/)**: News and analysis on the robotics industry.
+* **[IEEE Spectrum Robotics](https://spectrum.ieee.org/robotics)**: In-depth articles on robotics research and applications.
 
-### Machine Learning & AI
-* [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
-* [Deep Learning](http://www.deeplearningbook.org/)
+## Tools & Software
 
-### Math
-* [Calculus](http://www.stewartcalculus.com/media/16_home.php)
+* **[Julia Language](https://julialang.org/)**: My preferred language for technical computing.
+* **[Franklin.jl](https://franklinjl.org/)**: The static site generator used to build this website.
+* **[VS Code](https://code.visualstudio.com/)**: My primary code editor.
+* **[Zotero](https://www.zotero.org/)**: Reference management.
+* **[Overleaf](https://www.overleaf.com/)**: Collaborative LaTeX editor.
 
-### Code
-* [Learn You a Haskell](http://learnyouahaskell.com/)
+## Interesting Blogs & People
 
+* **[Andrej Karpathy's Blog](https://karpathy.github.io/)**: Insights on deep learning and AI.
+* **[Colah's Blog](https://colah.github.io/)**: Beautiful explanations of ML concepts.
+* **[Lilian Weng's Blog](https://lilianweng.github.io/lil-log/)**: Thorough posts on various AI topics.
+* **[BAIR Blog (Berkeley AI Research)](https://bair.berkeley.edu/blog/)**: Updates from Berkeley's AI lab.
 
-## Services
+## Other
 
-### Media
-* [Plex](https://www.plex.tv/)
+* **[Project Euler](https://projecteuler.net/)**: Challenging mathematical/computer programming problems.
+* **[Hacker News](https://news.ycombinator.com/)**: Tech news aggregator.
 
-### News
-* The [Wall Street Journal](https://www.wsj.com/)
-* [Washington Post](https://www.washingtonpost.com/)
-* [FiveThirtyEight](http://fivethirtyeight.com/)
+---
 
-### Education
-I've learned pretty much everything I know about math from Khan Academy. Best place on the internet.
+*Typo corrected: Probabilistic.*
+*Added more example links.*
 
-* [Khan Academy](https://www.khanacademy.org/)
-
-## Code
-
-### Languages
-* [Rust](https://www.rust-lang.org/)
-* [Julia](https://julialang.org/)
-* [R](https://www.r-project.org/)
-* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
-* [Haskell](https://www.haskell.org/)[^1]
-
-[^1]: Do you like purity? Do you like a typing system so fierce it'll make your head spin? Do you like unlearning everything you ever thought you knew about programming? Try Haskell!
-
-### Probabalistic Programming
-* An [introduction](https://www.cs.cornell.edu/courses/cs4110/2016fa/lectures/lecture33.html)
-* [Turing.jl](https://github.com/TuringLang/Turing.jl)
-
-## General
-
-### Cool Sites
-* [Gaussian Processes at Distill](https://distill.pub/2019/visual-exploration-gaussian-processes/)
-
-That's all, folks.
